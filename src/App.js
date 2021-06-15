@@ -5,16 +5,16 @@ import Button from "./components/Button";
 
 const famille = {
   membre1: {
+    nom: "Julien",
+    age: 39,
+  },
+  membre2: {
     nom: "Nicolas",
     age: 35,
   },
-  membre2: {
+  membre3: {
     nom: "Thomas",
     age: 31,
-  },
-  membre3: {
-    nom: "Julien",
-    age: 39,
   },
   membre4: {
     nom: "Nesquik",
@@ -29,7 +29,7 @@ class App extends Component {
 
   handleClick = (num) => {
     const famille = { ...this.state.famille };
-    famille.membre1.age += num;
+    famille.membre2.age += num;
     this.setState({ famille });
   };
 
@@ -37,7 +37,7 @@ class App extends Component {
     const famille = { ...this.state.famille };
     const nom = event.target.value
     // console.log(nom);
-    famille.membre1.nom = nom
+    famille.membre2.nom = nom
     this.setState({ famille });
   };
 
