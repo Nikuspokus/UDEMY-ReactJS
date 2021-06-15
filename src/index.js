@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App titre='Mon app React' sousTitre='2eme props' />
   </React.StrictMode>,
   document.getElementById('root')
 );
