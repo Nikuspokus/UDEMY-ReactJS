@@ -1,0 +1,16 @@
+button {
+  background: linear-gradient(to right, #732FDF, #BD08FF);
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Montserrat';
+  font-weight: lighter;
+  color: white;
+  border: none;
+  opacity: 0.8;
+  transition: 1s;
+}
+
+button:hover {
+  opacity: 1;
+  background: linear-gradient(to right, #BD08FF, #732FDF);
+}
