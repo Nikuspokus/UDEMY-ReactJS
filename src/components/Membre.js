@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 
-
-const Membre = ({ nom, age, children, cacherNom }) => {
+const Membre = ({ nom, age, children, cacherNom, handleChange }) => {
   return (
     <Fragment>
       <h2
@@ -11,6 +10,11 @@ const Membre = ({ nom, age, children, cacherNom }) => {
         }}
       >
         {nom.toUpperCase()} : {age}
+        <input
+            value={nom}
+            onChange={handleChange}
+            type="text"
+          />
       </h2>
       <button onClick={cacherNom}>X</button>
       {children ? <p>{children}</p> : null}
