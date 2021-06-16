@@ -8,9 +8,11 @@ button {
   border: none;
   opacity: 0.8;
   transition: 1s;
+  rotate: 0deg;
 }
 
 button:hover {
+  rotate: 180deg;
   opacity: 1;
-  background: linear-gradient(to right, #BD08FF, #732FDF);
+  /* background: linear-gradient(to right, #BD08FF, #732FDF); */
 }

@@ -25,6 +25,7 @@ const famille = {
 class App extends Component {
   state = {
     famille,
+    isShow: false
   };
 
   handleClick = (num) => {
@@ -41,10 +42,15 @@ class App extends Component {
     this.setState({ famille });
   };
 
+  handleShowDescription = () => {
+    const isShow = !this.state.isShow
+    this.setState({ isShow })
+  }
+
   render() {
     // on peut tout importer en destructuring comme ci-dessous pour un code plus simple et plus lisible
     const { titre } = this.props;
-    const { famille } = this.state;
+    const { famille, isShow } = this.state;
     return (
       // Méthode d'écrire de code = JSX
       <Fragment>
@@ -57,10 +63,14 @@ class App extends Component {
           <Membre nom={famille.membre4.nom} age={famille.membre4.age}>
             {/* le contenu de la balise Membre est considéré comme un 'Children' 
               c'est à dire un autre style de 'props' */}
-            Je suis un{" "}
-            <strong>
-              <em>chat</em>
-            </strong>
+            {
+              isShow ? <p>Je suis un <strong><em>chat</em></strong>.</p> : null
+            }
+            <button onClick={this.handleShowDescription}>
+            {
+              isShow ? 'Cacher' : 'Montrer'
+            }
+            </button>
           </Membre>
           <Button vieillir={() => this.handleClick(2)} />
         </div>
